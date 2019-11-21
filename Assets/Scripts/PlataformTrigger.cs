@@ -10,12 +10,12 @@ public class PlataformTrigger : MonoBehaviour {
 
 	void OnTriggerExit(Collider other)
 	{
-		if(other.gameObject.CompareTag("Player"))
-		{
-			rb.useGravity = true;
-			Destroy(gameObject,0.5f);
-			GroundController.numGroundScene--;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            rb.useGravity = true;
+            Destroy(gameObject, 0.1f);
+            GroundController.numGroundScene--;
             //Debug.Log("hancur");
-		}
-	}
+        }
+    }
 }
